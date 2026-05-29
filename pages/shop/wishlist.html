@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Lista de Deseos | E-commerce Móvil</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="admin-inventory" style="max-width: 1000px">
+      <header>
+        <h2>Mi Lista de Deseos</h2>
+        <p style="color: var(--text-color); margin-top: 0.5rem">
+          Equipos guardados para futura compra.
+        </p>
+      </header>
+
+      <form id="form-wishlist" class="grid-form form-single-column">
+        <fieldset>
+          <legend>Tus Artículos Guardados</legend>
+
+          <div class="wishlist-grid">
+            <article class="wishlist-card">
+              <button
+                type="button"
+                class="btn-remove-wishlist"
+                title="Eliminar"
+              >
+                X
+              </button>
+              <div
+                style="
+                  height: 150px;
+                  background: #f1f5f9;
+                  margin-bottom: 1rem;
+                  border-radius: 4px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <span style="color: #94a3b8">[IMG iPhone 15]</span>
+              </div>
+              <h3 style="font-size: 1.1rem">iPhone 15 Pro Max</h3>
+              <p
+                style="
+                  color: var(--primary-color);
+                  font-weight: bold;
+                  margin: 0.5rem 0;
+                "
+              >
+                S/ 5,999.00
+              </p>
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+                  margin-top: 1rem;
+                  font-size: 0.9rem;
+                "
+              >
+                <input type="checkbox" name="move_to_cart" value="IPH-15-PM" />
+                Seleccionar
+              </label>
+            </article>
+
+            <article class="wishlist-card">
+              <button
+                type="button"
+                class="btn-remove-wishlist"
+                title="Eliminar"
+              >
+                X
+              </button>
+              <div
+                style="
+                  height: 150px;
+                  background: #f1f5f9;
+                  margin-bottom: 1rem;
+                  border-radius: 4px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <span style="color: #94a3b8">[IMG Xiaomi 14T]</span>
+              </div>
+              <h3 style="font-size: 1.1rem">Xiaomi 14T Pro</h3>
+              <p
+                style="
+                  color: var(--primary-color);
+                  font-weight: bold;
+                  margin: 0.5rem 0;
+                "
+              >
+                S/ 2,599.00
+              </p>
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+                  margin-top: 1rem;
+                  font-size: 0.9rem;
+                "
+              >
+                <input type="checkbox" name="move_to_cart" value="SM-14T-PRO" />
+                Seleccionar
+              </label>
+            </article>
+          </div>
+        </fieldset>
+
+        <div class="form-group button-group">
+          <button type="submit" class="btn-submit">
+            Mover seleccionados al Carrito
+          </button>
+        </div>
+      </form>
+    </main>
+    <footer
+      class="site-footer"
+      style="
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 3rem 1rem 1rem;
+        margin-top: 4rem;
+      "
+    >
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+        "
+      >
+        <div>
+          <h3 style="margin-bottom: 1rem">ApexStore</h3>
+          <p style="font-size: 0.9rem; color: #cbd5e1">
+            Tu especialista en equipos de alta gama y ecosistema inteligente.
+            Garantía técnica oficial.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem">Atención al Cliente</h4>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              font-size: 0.9rem;
+              line-height: 1.8;
+            "
+          >
+            <li>
+              <a
+                href="../shop/contact.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Contacto y Soporte</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/warranty.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Solicitud de Garantía</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/return.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Políticas de Devolución</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/complaints.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Libro de Reclamaciones</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem">Políticas Legales</h4>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              font-size: 0.9rem;
+              line-height: 1.8;
+            "
+          >
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Términos y Condiciones</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Política de Privacidad</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Tratamiento de Datos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        style="
+          max-width: 1200px;
+          margin: 2rem auto 0;
+          padding-top: 1.5rem;
+          border-top: 1px solid #334155;
+          text-align: center;
+          font-size: 0.85rem;
+          color: #94a3b8;
+        "
+      >
+        &copy; 2026 ApexStore. Todos los derechos reservados.
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras | E-commerce Móvil</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="admin-inventory">
+      <header>
+        <h2>Tu Carrito de Compras</h2>
+      </header>
+
+      <form id="form-cart" class="grid-form form-single-column">
+        <div style="overflow-x: auto">
+          <table class="cart-table" id="cart-table-body">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Precio Unitario</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Xiaomi 14T Pro</strong><br /><small
+                    >Color: Negro Titanio</small
+                  >
+                </td>
+                <td>S/ 2,599.00</td>
+                <td>
+                  <input
+                    type="number"
+                    class="quantity-input"
+                    name="qty_1"
+                    value="1"
+                    min="1"
+                    max="10"
+                  />
+                </td>
+                <td><strong>S/ 2,599.00</strong></td>
+                <td>
+                  <button type="button" class="btn-remove">Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <fieldset class="cart-summary">
+          <legend>Resumen del Pedido</legend>
+          <div class="form-group" style="align-items: flex-end">
+            <label for="cupon">Código de Descuento:</label>
+            <div style="display: flex; gap: 0.5rem">
+              <input
+                type="text"
+                id="cupon"
+                name="cupon"
+                placeholder="Ej: DESC20"
+              />
+              <button
+                type="button"
+                class="btn-submit"
+                style="background-color: var(--secondary-color)"
+              >
+                Aplicar
+              </button>
+            </div>
+          </div>
+
+          <h3 style="margin-top: 1rem; color: var(--text-color)">
+            Total a Pagar:
+            <span style="color: var(--primary-color); font-size: 1.5rem"
+              >S/ 2,599.00</span
+            >
+          </h3>
+        </fieldset>
+
+        <div class="form-group button-group">
+          <button
+            type="button"
+            class="btn-reset"
+            onclick="window.location.href = '../admin/inventory.html'"
+          >
+            Seguir Comprando
+          </button>
+          <button type="submit" class="btn-submit">Proceder al Pago</button>
+        </div>
+      </form>
+    </main>
+    <footer
+      class="site-footer"
+      style="
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 3rem 1rem 1rem;
+        margin-top: 4rem;
+      "
+    >
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+        "
+      >
+        <div>
+          <h3 style="margin-bottom: 1rem">ApexStore</h3>
+          <p style="font-size: 0.9rem; color: #cbd5e1">
+            Tu especialista en equipos de alta gama y ecosistema inteligente.
+            Garantía técnica oficial.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem">Atención al Cliente</h4>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              font-size: 0.9rem;
+              line-height: 1.8;
+            "
+          >
+            <li>
+              <a
+                href="../shop/contact.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Contacto y Soporte</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/warranty.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Solicitud de Garantía</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/return.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Políticas de Devolución</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/complaints.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Libro de Reclamaciones</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem">Políticas Legales</h4>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              font-size: 0.9rem;
+              line-height: 1.8;
+            "
+          >
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Términos y Condiciones</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Política de Privacidad</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Tratamiento de Datos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        style="
+          max-width: 1200px;
+          margin: 2rem auto 0;
+          padding-top: 1.5rem;
+          border-top: 1px solid #334155;
+          text-align: center;
+          font-size: 0.85rem;
+          color: #94a3b8;
+        "
+      >
+        &copy; 2026 ApexStore. Todos los derechos reservados.
+      </div>
+    </footer>
+  </body>
+</html>

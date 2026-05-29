@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Pedidos | Panel de Control</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="admin-inventory" style="max-width: 1200px">
+      <header
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <h2>Control de Órdenes y Logística</h2>
+          <p style="color: var(--text-color); margin-top: 0.5rem">
+            Gestión de estados de despacho y facturación.
+          </p>
+        </div>
+        <div class="form-group" style="width: 300px">
+          <input
+            type="text"
+            id="buscar_orden"
+            placeholder="Buscar por ID de Orden o Cliente..."
+          />
+        </div>
+      </header>
+
+      <form id="form-admin-orders" class="grid-form form-single-column">
+        <div style="overflow-x: auto">
+          <table class="cart-table" id="orders-table-body">
+            <thead>
+              <tr>
+                <th>ID Orden</th>
+                <th>Fecha</th>
+                <th>Cliente</th>
+                <th>Total</th>
+                <th>Estado Actual</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>#ORD-999</strong></td>
+                <td>28/05/2026 19:45</td>
+                <td>Luisangel Ronal Pardave</td>
+                <td>S/ 2,614.00</td>
+                <td>
+                  <select class="status-select" name="estado_999">
+                    <option value="PENDIENTE" selected>
+                      Pendiente de Pago
+                    </option>
+                    <option value="PAGADO">Pago Confirmado</option>
+                    <option value="EN_TRANSITO">En Tránsito (Courier)</option>
+                    <option value="ENTREGADO">Entregado</option>
+                    <option value="CANCELADO">Cancelado</option>
+                  </select>
+                </td>
+                <td>
+                  <button type="button" class="btn-update">Actualizar</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>#ORD-998</strong></td>
+                <td>27/05/2026 10:15</td>
+                <td>Juan Pérez</td>
+                <td>S/ 4,200.00</td>
+                <td>
+                  <select class="status-select" name="estado_998">
+                    <option value="PENDIENTE">Pendiente de Pago</option>
+                    <option value="PAGADO">Pago Confirmado</option>
+                    <option value="EN_TRANSITO" selected>
+                      En Tránsito (Courier)
+                    </option>
+                    <option value="ENTREGADO">Entregado</option>
+                    <option value="CANCELADO">Cancelado</option>
+                  </select>
+                </td>
+                <td>
+                  <button type="button" class="btn-update">Actualizar</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>#ORD-997</strong></td>
+                <td>28/05/2026 19:45</td>
+                <td>Luisangel Ronal Pardave</td>
+                <td>S/ 2,614.00</td>
+                <td>
+                  <select class="status-select" name="estado_997">
+                    <option value="PENDIENTE" selected>
+                      Pendiente de Pago
+                    </option>
+                    <option value="PAGADO">Pago Confirmado</option>
+                    <option value="EN_TRANSITO">En Tránsito (Courier)</option>
+                    <option value="ENTREGADO">Entregado</option>
+                    <option value="CANCELADO">Cancelado</option>
+                  </select>
+                </td>
+                <td>
+                  <button type="button" class="btn-update">Actualizar</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>#ORD-996</strong></td>
+                <td>26/05/2026 14:30</td>
+                <td>María López</td>
+                <td>S/ 1,299.00</td>
+                <td>
+                  <select class="status-select" name="estado_996">
+                    <option value="PENDIENTE">Pendiente de Pago</option>
+                    <option value="PAGADO" selected>Pago Confirmado</option>
+                    <option value="EN_TRANSITO">En Tránsito (Courier)</option>
+                    <option value="ENTREGADO">Entregado</option>
+                    <option value="CANCELADO">Cancelado</option>
+                  </select>
+                </td>
+                <td>
+                  <button type="button" class="btn-update">Actualizar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+    </main>
+    <footer
+      class="site-footer"
+      style="
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 3rem 1rem 1rem;
+        margin-top: 4rem;
+      "
+    >
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+        "
+      >
+        <div>
+          <h3 style="margin-bottom: 1rem">ApexStore</h3>
+          <p style="font-size: 0.9rem; color: #cbd5e1">
+            Tu especialista en equipos de alta gama y ecosistema inteligente.
+            Garantía técnica oficial.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem">Atención al Cliente</h4>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              font-size: 0.9rem;
+              line-height: 1.8;
+            "
+          >
+            <li>
+              <a
+                href="../shop/contact.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Contacto y Soporte</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/warranty.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Solicitud de Garantía</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/return.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Políticas de Devolución</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/complaints.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Libro de Reclamaciones</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem">Políticas Legales</h4>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              font-size: 0.9rem;
+              line-height: 1.8;
+            "
+          >
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Términos y Condiciones</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Política de Privacidad</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Tratamiento de Datos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        style="
+          max-width: 1200px;
+          margin: 2rem auto 0;
+          padding-top: 1.5rem;
+          border-top: 1px solid #334155;
+          text-align: center;
+          font-size: 0.85rem;
+          color: #94a3b8;
+        "
+      >
+        &copy; 2026 ApexStore. Todos los derechos reservados.
+      </div>
+    </footer>
+  </body>
+</html>

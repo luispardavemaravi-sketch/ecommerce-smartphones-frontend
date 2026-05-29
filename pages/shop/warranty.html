@@ -1,137 +1,90 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro de Cliente</title>
+    <title>Solicitud de Garantía</title>
     <link rel="stylesheet" href="../../assets/css/styles.css" />
   </head>
   <body>
-    <main class="admin-inventory">
-      <header>Crear cuenta de cliente</header>
-      <form id="form-register-client" class="grid-form">
+    <main class="admin-inventory" style="max-width: 800px">
+      <header>
+        <h2>Solicitud de Garantía</h2>
+        <p style="color: var(--text-color); margin-top: 0.5rem">
+          Reporta fallos de fábrica dentro de los 12 meses de tu compra.
+        </p>
+      </header>
+
+      <form id="form-warranty" class="grid-form" enctype="multipart/form-data">
         <fieldset>
-          <legend>Datos Personales</legend>
+          <legend>Datos del Equipo</legend>
 
           <div class="form-group">
-            <label for="nombre">Nombre Completo:</label>
+            <label for="numero_orden">Número de Orden de Compra:</label>
             <input
               type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Ej: Luisangel Ronal"
+              id="numero_orden"
+              name="numero_orden"
+              placeholder="Ej: ORD-998"
               required
             />
           </div>
 
           <div class="form-group">
-            <label for="apellidos">Apellidos:</label>
+            <label for="imei_equipo">IMEI o Número de Serie:</label>
             <input
               type="text"
-              id="apellidos"
-              name="apellidos"
-              placeholder="Ej: Pardave Maravi"
+              id="imei_equipo"
+              name="imei_equipo"
+              placeholder="Ingresa los 15 dígitos del IMEI"
+              minlength="15"
+              maxlength="15"
+              pattern="\d{15}"
               required
             />
           </div>
 
-          <div class="form-group">
-            <label for="tipo-documento">Tipo de documento:</label>
-            <select id="tipo-documento" name="tipo-documento" required>
-              <option value="">Seleccione un tipo de documento...</option>
-              <option value="DNI">DNI</option>
-              <option value="Pasaporte">Pasaporte</option>
-              <option value="Carnet de Extranjería">
-                Carnet de Extranjería
-              </option>
-              <option value="Otros">Otros</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="numero-documento">Número de documento:</label>
-            <input
-              type="text"
-              id="numero-documento"
-              name="numero-documento"
-              placeholder="Ej: 12345678, A1234567..."
+          <div class="form-group" style="grid-column: 1 / -1">
+            <label for="falla_reportada"
+              >Descripción del Problema Técnico:</label
+            >
+            <textarea
+              id="falla_reportada"
+              name="falla_reportada"
+              rows="4"
+              placeholder="Ej: La pantalla parpadea en color verde cuando el brillo baja del 20%..."
               required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="direccion">Dirección:</label>
-            <input
-              type="text"
-              id="direccion"
-              name="direccion"
-              placeholder="Ej: Av. Principal 123, Lima"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="ciudad">Ciudad:</label>
-            <input
-              type="text"
-              id="ciudad"
-              name="ciudad"
-              placeholder="Ej: Lima"
-              required
-            />
+            ></textarea>
           </div>
         </fieldset>
 
         <fieldset>
-          <legend>Credenciales de Acceso</legend>
+          <legend>Evidencia Visual</legend>
 
-          <div class="form-group">
-            <label for="email">Correo Electrónico:</label>
+          <div class="form-group" style="grid-column: 1 / -1">
+            <label for="evidencia_fotos"
+              >Sube fotos o videos del problema (Max 5MB):</label
+            >
             <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Ej: luisangel@example.com"
+              type="file"
+              id="evidencia_fotos"
+              name="evidencia_fotos"
+              accept="image/png, image/jpeg, video/mp4"
+              multiple
               required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="telefono">Telefono Movil</label>
-            <input
-              type="tel"
-              id="telefono"
-              name="telefono"
-              placeholder="Ej: +51 987654321"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="password">Contraseña:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              minlength="8"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="confirm_password">Confirmar Contraseña:</label>
-            <input
-              type="password"
-              id="confirm_password"
-              name="confirm_password"
-              minlength="8"
-              required
+              style="
+                padding: 1rem;
+                border: 1px dashed var(--border-color);
+                background: #f8fafc;
+              "
             />
           </div>
         </fieldset>
-        <div class="form-group button-group">
-          <button type="submit" class="btn-submit">Registrar Cuenta</button>
-          <button type="reset" class="btn-reset">Limpiar Datos</button>
+
+        <div class="form-group button-group" style="grid-column: 1 / -1">
+          <button type="submit" class="btn-submit btn-full">
+            Generar Ticket de Soporte
+          </button>
         </div>
       </form>
     </main>

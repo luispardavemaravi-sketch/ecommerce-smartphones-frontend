@@ -1,137 +1,65 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro de Cliente</title>
+    <title>Devoluciones | E-commerce Móvil</title>
     <link rel="stylesheet" href="../../assets/css/styles.css" />
   </head>
   <body>
-    <main class="admin-inventory">
-      <header>Crear cuenta de cliente</header>
-      <form id="form-register-client" class="grid-form">
+    <main class="admin-inventory" style="max-width: 700px">
+      <header>
+        <h2>Solicitud de Devolución</h2>
+        <p style="color: var(--text-color); margin-top: 0.5rem">
+          Aplica solo dentro de los primeros 7 días de recibido el producto.
+        </p>
+      </header>
+
+      <form id="form-return" class="grid-form">
         <fieldset>
-          <legend>Datos Personales</legend>
+          <legend>Datos del Retorno</legend>
 
           <div class="form-group">
-            <label for="nombre">Nombre Completo:</label>
+            <label for="orden_devolucion">Número de Orden:</label>
             <input
               type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Ej: Luisangel Ronal"
+              id="orden_devolucion"
+              name="orden_devolucion"
               required
             />
           </div>
 
           <div class="form-group">
-            <label for="apellidos">Apellidos:</label>
-            <input
-              type="text"
-              id="apellidos"
-              name="apellidos"
-              placeholder="Ej: Pardave Maravi"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="tipo-documento">Tipo de documento:</label>
-            <select id="tipo-documento" name="tipo-documento" required>
-              <option value="">Seleccione un tipo de documento...</option>
-              <option value="DNI">DNI</option>
-              <option value="Pasaporte">Pasaporte</option>
-              <option value="Carnet de Extranjería">
-                Carnet de Extranjería
+            <label for="motivo_devolucion">Motivo:</label>
+            <select id="motivo_devolucion" name="motivo_devolucion" required>
+              <option value="arrepentimiento">Arrepentimiento de compra</option>
+              <option value="equivocado">
+                Me enviaron un modelo equivocado
               </option>
-              <option value="Otros">Otros</option>
+              <option value="defectuoso">El producto llegó defectuoso</option>
+              <option value="no_llego">El producto no llegó</option>
+              <option value="otro">Otro (especificar en observaciones)</option>
             </select>
           </div>
 
-          <div class="form-group">
-            <label for="numero-documento">Número de documento:</label>
-            <input
-              type="text"
-              id="numero-documento"
-              name="numero-documento"
-              placeholder="Ej: 12345678, A1234567..."
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="direccion">Dirección:</label>
-            <input
-              type="text"
-              id="direccion"
-              name="direccion"
-              placeholder="Ej: Av. Principal 123, Lima"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="ciudad">Ciudad:</label>
-            <input
-              type="text"
-              id="ciudad"
-              name="ciudad"
-              placeholder="Ej: Lima"
-              required
-            />
+          <div class="form-group" style="grid-column: 1 / -1">
+            <label for="condicion_caja">Condición del Empaque:</label>
+            <select id="condicion_caja" name="condicion_caja" required>
+              <option value="sellado">Sellado de fábrica (Intacto)</option>
+              <option value="abierto">
+                Caja abierta, pero con todos sus accesorios
+              </option>
+              <option value="dañado">Caja dañada o incompleta</option>
+              <option value="sin_caja">Producto sin caja (solo equipo)</option>
+              <option value="otro">Otro (especificar en observaciones)</option>
+            </select>
           </div>
         </fieldset>
 
-        <fieldset>
-          <legend>Credenciales de Acceso</legend>
-
-          <div class="form-group">
-            <label for="email">Correo Electrónico:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Ej: luisangel@example.com"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="telefono">Telefono Movil</label>
-            <input
-              type="tel"
-              id="telefono"
-              name="telefono"
-              placeholder="Ej: +51 987654321"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="password">Contraseña:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              minlength="8"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="confirm_password">Confirmar Contraseña:</label>
-            <input
-              type="password"
-              id="confirm_password"
-              name="confirm_password"
-              minlength="8"
-              required
-            />
-          </div>
-        </fieldset>
-        <div class="form-group button-group">
-          <button type="submit" class="btn-submit">Registrar Cuenta</button>
-          <button type="reset" class="btn-reset">Limpiar Datos</button>
+        <div class="form-group button-group" style="grid-column: 1 / -1">
+          <button type="submit" class="btn-submit btn-full">
+            Procesar Retorno
+          </button>
         </div>
       </form>
     </main>

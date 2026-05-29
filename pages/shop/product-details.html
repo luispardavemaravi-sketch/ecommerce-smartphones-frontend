@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalles del Equipo</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body>
+    <header
+      class="store-header"
+      style="
+        background: var(--secondary-color);
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <h1>
+        style="cursor: pointer" onclick="window.location.href = 'catalog.html'"
+        > ApexStore
+      </h1>
+      <nav>
+        <a href="cart.html" style="color: white; font-weight: bold"
+          >🛒 Carrito (1)</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <div class="product-detail-layout">
+        <div class="detail-image-container">
+          <span style="color: #94a3b8; font-size: 1.2rem"
+            >[Renderización del Xiaomi 14T Pro]</span
+          >
+        </div>
+
+        <div class="detail-info">
+          <h2>Xiaomi 14T Pro</h2>
+          <p style="color: #64748b; margin-bottom: 1rem">SKU: SM-14T-PRO-512</p>
+          <div class="detail-price">S/ 2,599.00</div>
+
+          <ul class="specs-list">
+            <li><span>Procesador</span> <span>Dimensity 9300+</span></li>
+            <li><span>Memoria RAM</span> <span>12 GB</span></li>
+            <li><span>Almacenamiento</span> <span>512 GB</span></li>
+            <li><span>Batería</span> <span>5000 mAh</span></li>
+            <li><span>Sistema Operativo</span> <span>HyperOS</span></li>
+          </ul>
+
+          <form id="form-add-to-cart" class="grid-form form-single-column">
+            <div class="form-group">
+              <label for="cantidad_compra"
+                >Cantidad a comprar (Stock disponible: 15):</label
+              >
+              <input
+                type="number"
+                id="cantidad_compra"
+                name="cantidad"
+                value="1"
+                min="1"
+                max="15"
+                required
+              />
+            </div>
+
+            <div class="form-group button-group" style="margin-top: 1rem">
+              <button
+                type="submit"
+                class="btn-submit btn-full"
+                style="font-size: 1.1rem; padding: 1rem"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="site-footer"
+      style="
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 3rem 1rem 1rem;
+        margin-top: 4rem;
+      "
+    >
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+        "
+      >
+        <div>
+          <h3 style="margin-bottom: 1rem">ApexStore</h3>
+          <p style="font-size: 0.9rem; color: #cbd5e1">
+            Tu especialista en equipos de alta gama y ecosistema inteligente.
+            Garantía técnica oficial.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem">Atención al Cliente</h4>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              font-size: 0.9rem;
+              line-height: 1.8;
+            "
+          >
+            <li>
+              <a
+                href="../shop/contact.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Contacto y Soporte</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/warranty.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Solicitud de Garantía</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/return.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Políticas de Devolución</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/complaints.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Libro de Reclamaciones</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem">Políticas Legales</h4>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              font-size: 0.9rem;
+              line-height: 1.8;
+            "
+          >
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Términos y Condiciones</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Política de Privacidad</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Tratamiento de Datos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        style="
+          max-width: 1200px;
+          margin: 2rem auto 0;
+          padding-top: 1.5rem;
+          border-top: 1px solid #334155;
+          text-align: center;
+          font-size: 0.85rem;
+          color: #94a3b8;
+        "
+      >
+        &copy; 2026 ApexStore. Todos los derechos reservados.
+      </div>
+    </footer>
+  </body>
+</html>

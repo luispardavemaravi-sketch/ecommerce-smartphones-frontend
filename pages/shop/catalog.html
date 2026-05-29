@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Smartphones | E-commerce Móvil</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body>
+    <header
+      class="store-header"
+      style="
+        background: var(--secondary-color);
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <h1>ApexStore</h1>
+      <nav>
+        <a href="../auth/profile.html" style="color: white; margin-right: 1rem"
+          >Mi Perfil</a
+        >
+        <a href="cart.html" style="color: white; font-weight: bold"
+          >🛒 Carrito (1)</a
+        >
+      </nav>
+    </header>
+
+    <main class="catalog-layout">
+      <aside class="filters-sidebar">
+        <form id="form-filters" class="grid-form form-single-column">
+          <fieldset>
+            <legend>Filtros de Búsqueda</legend>
+
+            <div class="form-group">
+              <label for="search">Buscar equipo:</label>
+              <input
+                type="search"
+                id="search"
+                name="search"
+                placeholder="Ej: iPhone 15, Xiaomi 14T..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="marca_filtro">Marca:</label>
+              <select id="marca_filtro" name="marca">
+                <option value="todas">Todas las marcas</option>
+                <option value="Xiaomi">Xiaomi</option>
+                <option value="Apple">Apple</option>
+                <option value="Samsung">Samsung</option>
+                <option value="OnePlus">OnePlus</option>
+                <option value="Huawei">Huawei</option>
+                <option value="Motorola">Motorola</option>
+                <option value="Google">Google</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Rango de Precio:</label>
+              <div style="display: flex; gap: 0.5rem; align-items: center">
+                <input
+                  type="number"
+                  name="min_price"
+                  placeholder="Min"
+                  style="width: 100%"
+                />
+                <span>-</span>
+                <input
+                  type="number"
+                  name="max_price"
+                  placeholder="Max"
+                  style="width: 100%"
+                />
+              </div>
+            </div>
+
+            <div class="form-group button-group">
+              <button type="submit" class="btn-submit btn-full">
+                Aplicar Filtros
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </aside>
+
+      <section class="products-grid">
+        <article class="product-card">
+          <div
+            class="product-image"
+            style="
+              background: #f1f5f9;
+              height: 200px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 4px;
+              margin-bottom: 1rem;
+            "
+          >
+            <span style="color: #94a3b8">[Imagen Xiaomi 14T Pro]</span>
+          </div>
+          <h3 class="product-title">Xiaomi 14T Pro 512GB</h3>
+          <p class="product-specs">Dimensity 9300+ | 12GB RAM</p>
+          <div class="product-price">S/ 2,599.00</div>
+          <button
+            type="button"
+            class="btn-submit btn-full"
+            onclick="window.location.href = 'product-details.html'"
+          >
+            Ver Detalles
+          </button>
+        </article>
+
+        <article class="product-card">
+          <div
+            class="product-image"
+            style="
+              background: #f1f5f9;
+              height: 200px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 4px;
+              margin-bottom: 1rem;
+            "
+          >
+            <span style="color: #94a3b8"
+              >[Imagen Samsung Galaxy S24 Ultra]</span
+            >
+          </div>
+          <h3 class="product-title">Samsung Galaxy S24 Ultra</h3>
+          <p class="product-specs">Snapdragon 8 Gen 3 | 12GB RAM</p>
+          <div class="product-price">S/ 5,499.00</div>
+          <button
+            type="button"
+            class="btn-submit btn-full"
+            onclick="window.location.href = 'product-details.html'"
+          >
+            Ver Detalles
+          </button>
+        </article>
+      </section>
+    </main>
+    <footer
+      class="site-footer"
+      style="
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 3rem 1rem 1rem;
+        margin-top: 4rem;
+      "
+    >
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+        "
+      >
+        <div>
+          <h3 style="margin-bottom: 1rem">ApexStore</h3>
+          <p style="font-size: 0.9rem; color: #cbd5e1">
+            Tu especialista en equipos de alta gama y ecosistema inteligente.
+            Garantía técnica oficial.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem">Atención al Cliente</h4>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              font-size: 0.9rem;
+              line-height: 1.8;
+            "
+          >
+            <li>
+              <a
+                href="../shop/contact.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Contacto y Soporte</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/warranty.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Solicitud de Garantía</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/return.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Políticas de Devolución</a
+              >
+            </li>
+            <li>
+              <a
+                href="../shop/complaints.html"
+                style="color: #cbd5e1; text-decoration: none"
+                >Libro de Reclamaciones</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem">Políticas Legales</h4>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              font-size: 0.9rem;
+              line-height: 1.8;
+            "
+          >
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Términos y Condiciones</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Política de Privacidad</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #cbd5e1; text-decoration: none"
+                >Tratamiento de Datos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        style="
+          max-width: 1200px;
+          margin: 2rem auto 0;
+          padding-top: 1.5rem;
+          border-top: 1px solid #334155;
+          text-align: center;
+          font-size: 0.85rem;
+          color: #94a3b8;
+        "
+      >
+        &copy; 2026 ApexStore. Todos los derechos reservados.
+      </div>
+    </footer>
+  </body>
+</html>
