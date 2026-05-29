@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ApexStore</title>
+    <title>ApexStore | Inicio</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
+
   <body>
     <header
       class="store-header"
@@ -36,11 +37,13 @@
         <a
           href="pages/shop/catalog.html"
           style="color: white; text-decoration: none"
+          class="nav-link-header"
           >Ver Catálogo</a
         >
         <a
           href="pages/auth/login.html"
           style="color: white; text-decoration: none"
+          class="nav-link-header"
           >Iniciar Sesión</a
         >
         <a
@@ -52,8 +55,11 @@
             padding: 0.5rem 1rem;
             border-radius: 4px;
             text-decoration: none;
-            transition: background 0.3s;
+            transition:
+              background 0.3s,
+              transform 0.2s;
           "
+          class="btn-register-header"
           >Crear Cuenta</a
         >
       </nav>
@@ -61,17 +67,20 @@
 
     <main>
       <section
+        class="hero-section"
         style="
           background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
           color: white;
           padding: 5rem 2rem;
           text-align: center;
+          overflow: hidden;
         "
       >
-        <h2 style="font-size: 3rem; margin-bottom: 1rem">
+        <h2 class="hero-title" style="font-size: 3rem; margin-bottom: 1rem">
           El Ecosistema Inteligente en tus Manos
         </h2>
         <p
+          class="hero-p"
           style="
             font-size: 1.2rem;
             color: #cbd5e1;
@@ -86,6 +95,7 @@
         </p>
         <a
           href="pages/shop/catalog.html"
+          class="hero-btn"
           style="
             display: inline-block;
             background: var(--primary-color);
@@ -95,7 +105,10 @@
             font-weight: bold;
             border-radius: 4px;
             text-decoration: none;
-            transition: transform 0.2s;
+            transition:
+              background-color 0.3s ease,
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
           "
         >
           Explorar Equipos
@@ -114,11 +127,16 @@
         "
       >
         <article
+          class="feature-card"
           style="
             padding: 2rem;
             border: 1px solid var(--border-color);
             border-radius: 8px;
             background: white;
+            transition:
+              transform 0.3s ease,
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
           "
         >
           <h3
@@ -137,11 +155,16 @@
         </article>
 
         <article
+          class="feature-card"
           style="
             padding: 2rem;
             border: 1px solid var(--border-color);
             border-radius: 8px;
             background: white;
+            transition:
+              transform 0.3s ease,
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
           "
         >
           <h3
@@ -160,11 +183,16 @@
         </article>
 
         <article
+          class="feature-card"
           style="
             padding: 2rem;
             border: 1px solid var(--border-color);
             border-radius: 8px;
             background: white;
+            transition:
+              transform 0.3s ease,
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
           "
         >
           <h3
@@ -183,6 +211,7 @@
         </article>
       </section>
     </main>
+
     <footer
       class="site-footer"
       style="
@@ -202,7 +231,20 @@
         "
       >
         <div>
-          <h3 style="margin-bottom: 1rem">TechStore Móvil</h3>
+          <h3 style="margin-bottom: 1rem">
+            <a
+              href="../../index.html"
+              style="
+                color: white;
+                text-decoration: none;
+                font-size: 1.5rem;
+                font-weight: bold;
+                letter-spacing: 1px;
+              "
+            >
+              ApexStore
+            </a>
+          </h3>
           <p style="font-size: 0.9rem; color: #cbd5e1">
             Tu especialista en equipos de alta gama y ecosistema inteligente.
             Garantía técnica oficial.
@@ -221,28 +263,28 @@
           >
             <li>
               <a
-                href="../shop/contact.html"
+                href="pages/shop/contact.html"
                 style="color: #cbd5e1; text-decoration: none"
                 >Contacto y Soporte</a
               >
             </li>
             <li>
               <a
-                href="../shop/warranty.html"
+                href="pages/shop/warranty.html"
                 style="color: #cbd5e1; text-decoration: none"
                 >Solicitud de Garantía</a
               >
             </li>
             <li>
               <a
-                href="../shop/return.html"
+                href="pages/shop/return.html"
                 style="color: #cbd5e1; text-decoration: none"
                 >Políticas de Devolución</a
               >
             </li>
             <li>
               <a
-                href="../shop/complaints.html"
+                href="pages/shop/complaints.html"
                 style="color: #cbd5e1; text-decoration: none"
                 >Libro de Reclamaciones</a
               >
@@ -290,7 +332,7 @@
           color: #94a3b8;
         "
       >
-        &copy; 2026 TechStore Móvil. Todos los derechos reservados.
+        &copy; 2026 ApexStore. Todos los derechos reservados.
       </div>
     </footer>
   </body>

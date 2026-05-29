@@ -2,7 +2,7 @@
    VARIABLES GLOBALES Y RESET
    ========================================= */
 :root {
-  --primary-color: #2563eb; /* Azul tecnológico corporativo */
+  --primary-color: #2563eb;
   --secondary-color: #1e293b;
   --bg-color: #f8fafc;
   --text-color: #334155;
@@ -62,21 +62,18 @@ legend {
   padding: 0 0.5rem;
 }
 
-/* Grilla principal del formulario */
 .grid-form fieldset {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
-/* Flexbox para cada grupo de input */
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-/* Ocupar todo el ancho si el campo es largo (ej. Textarea) */
 .form-group:has(textarea) {
   grid-column: 1 / -1;
 }
@@ -150,12 +147,43 @@ button:active {
   transform: scale(0.98);
 }
 
+.btn-remove {
+  background-color: var(--error-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-update {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-update:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-danger {
+  background-color: var(--error-color);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /* =========================================
    DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
    ========================================= */
 @media (max-width: 768px) {
   .grid-form fieldset {
-    grid-template-columns: 1fr; /* Colapsa a 1 sola columna en móviles */
+    grid-template-columns: 1fr;
   }
 
   .button-group {
@@ -176,7 +204,7 @@ button:active {
 }
 
 .form-single-column fieldset {
-  grid-template-columns: 1fr; /* Fuerza una sola columna */
+  grid-template-columns: 1fr;
 }
 
 .btn-full {
@@ -202,36 +230,52 @@ button:active {
   text-decoration: underline;
 }
 
-/* Estilos específicos rápidos para la tabla del carrito que complementan tu CSS global */
+/* =========================================
+   ESTILOS UNIFICADOS PARA TABLAS (Carrito)
+   ========================================= */
 .cart-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 2rem;
-  background: #fff;
+  margin-top: 1rem;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-.cart-table th,
+
+.cart-table th {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
 .cart-table td {
   padding: 1rem;
   border-bottom: 1px solid var(--border-color);
-  text-align: left;
+  vertical-align: middle;
 }
-.cart-table th {
-  background-color: var(--primary-color);
-  color: white;
+
+.cart-table tr:hover {
+  background-color: #f8fafc;
 }
+
 .quantity-input {
-  width: 60px;
+  width: 70px;
   padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
   text-align: center;
 }
-.btn-remove {
-  background-color: var(--error-color);
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
+
+.status-select {
+  padding: 0.4rem;
   border-radius: 4px;
-  cursor: pointer;
+  border: 1px solid var(--border-color);
+  font-weight: bold;
 }
+
 .cart-summary {
   background: #fcfcfc;
   padding: 1.5rem;
@@ -240,55 +284,18 @@ button:active {
   text-align: right;
 }
 
-/* Reutilizamos y extendemos la tabla del carrito para el panel admin */
-.cart-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  margin-top: 1rem;
-}
-.cart-table th,
-.cart-table td {
-  padding: 1rem;
-  border-bottom: 1px solid var(--border-color);
-  text-align: left;
-  font-size: 0.9rem;
-}
-.cart-table th {
-  background-color: var(--secondary-color);
-  color: white;
-}
-.status-select {
-  padding: 0.4rem;
-  border-radius: 4px;
-  border: 1px solid var(--border-color);
-  font-weight: bold;
-}
-.btn-update {
-  background-color: var(--success-color);
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.8rem;
-}
-.btn-update:hover {
-  background-color: #059669;
-}
 /* =========================================
    LAYOUT DEL CATÁLOGO Y TARJETAS
    ========================================= */
 .catalog-layout {
   display: grid;
-  grid-template-columns: 280px 1fr; /* Sidebar 280px, resto para productos */
+  grid-template-columns: 280px 1fr;
   gap: 2rem;
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-/* CSS Grid Avanzado para la cuadrícula responsiva */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -324,7 +331,7 @@ button:active {
   font-size: 0.85rem;
   color: #64748b;
   margin-bottom: 1rem;
-  flex-grow: 1; /* Empuja el precio y botón hacia abajo */
+  flex-grow: 1;
 }
 
 .product-price {
@@ -336,10 +343,13 @@ button:active {
 
 @media (max-width: 768px) {
   .catalog-layout {
-    grid-template-columns: 1fr; /* El sidebar pasa arriba en móviles */
+    grid-template-columns: 1fr;
   }
 }
 
+/* =========================================
+   DETALLE DE PRODUCTO
+   ========================================= */
 .product-detail-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -351,6 +361,7 @@ button:active {
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
+
 .detail-image-container {
   background: #f8fafc;
   border: 1px solid var(--border-color);
@@ -360,27 +371,32 @@ button:active {
   align-items: center;
   justify-content: center;
 }
+
 .detail-info h2 {
   font-size: 2rem;
   color: var(--secondary-color);
   margin-bottom: 0.5rem;
 }
+
 .detail-price {
   font-size: 2.5rem;
   font-weight: bold;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
 }
+
 .specs-list {
   list-style: none;
   margin-bottom: 2rem;
 }
+
 .specs-list li {
   padding: 0.75rem 0;
   border-bottom: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
 }
+
 .specs-list li span:first-child {
   font-weight: bold;
   color: #64748b;
@@ -393,52 +409,15 @@ button:active {
     padding: 1rem;
   }
 }
-.cart-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  margin-top: 1rem;
-}
-.cart-table th,
-.cart-table td {
-  padding: 1rem;
-  border-bottom: 1px solid var(--border-color);
-  text-align: left;
-  font-size: 0.9rem;
-}
-.cart-table th {
-  background-color: var(--secondary-color);
-  color: white;
-}
-.status-select {
-  padding: 0.4rem;
-  border-radius: 4px;
-  border: 1px solid var(--border-color);
-  font-weight: bold;
-}
-.btn-update {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.btn-update:hover {
-  background-color: #1d4ed8;
-}
-.btn-danger {
-  background-color: var(--error-color);
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+
+/* =========================================
+   WISHLIST
+   ========================================= */
 .review-header {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .product-preview {
   display: flex;
   align-items: center;
@@ -449,6 +428,7 @@ button:active {
   border: 1px solid var(--border-color);
   margin-bottom: 1.5rem;
 }
+
 .product-preview-img {
   width: 60px;
   height: 60px;
@@ -459,12 +439,14 @@ button:active {
   justify-content: center;
   font-size: 0.8rem;
 }
+
 .wishlist-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
+
 .wishlist-card {
   background: white;
   border: 1px solid var(--border-color);
@@ -472,6 +454,7 @@ button:active {
   padding: 1rem;
   position: relative;
 }
+
 .btn-remove-wishlist {
   position: absolute;
   top: 0.5rem;
@@ -484,9 +467,139 @@ button:active {
   height: 30px;
   cursor: pointer;
 }
-main {
-  /* --- AGREGAR ESTO --- */
-  flex-grow: 1; /* Obliga al contenido a expandirse y empujar el footer hacia el fondo */
 
-  /* Mantén el padding que ya tenías, por ejemplo: padding: 2rem; */
+/* =========================================
+   MAIN FLEX GROW
+   ========================================= */
+main {
+  flex-grow: 1;
+}
+/* ==========================================================================
+   ANIMACIONES EXCLUSIVAS PARA LA PÁGINA DE INICIO (INDEX)
+   ========================================================================== */
+
+/* 1. Efecto FadeIn lateral para los textos del Hero principal */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-title {
+  animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.hero-p {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+/* 2. Micro-interacción del Botón Principal (Crece y brilla al pasar el cursor) */
+.hero-btn:hover {
+  background-color: #1d4ed8 !important;
+  /* Azul más oscuro */
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.hero-btn:active {
+  transform: scale(0.98) translateY(0);
+}
+
+/* 3. Animación en cascada de las tarjetas de características (Cards) */
+.feature-card {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Retrasos secuenciales para que aparezcan una tras otra */
+.feature-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.feature-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.feature-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* 4. Efecto Hover de Elevación Premium para las tarjetas */
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color) !important;
+}
+
+/* 5. Efectos extras para links e interacciones del Header */
+.nav-link-header {
+  transition: color 0.2s ease;
+}
+
+.nav-link-header:hover {
+  color: #cbd5e1 !important;
+  text-decoration: underline !important;
+}
+
+.btn-register-header:hover {
+  background-color: #1d4ed8 !important;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   ANIMACIONES Y MEJORAS DE TRANSICIÓN (COMPLEMENTO DE CLASE)
+   ========================================================================== */
+
+/* 1. Definición de la animación de entrada suave (Fade In Up) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Aplicación de la animación a los contenedores principales del proyecto */
+.product-detail-layout,
+.catalog-layout,
+.admin-inventory,
+.cart-table {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* 3. Suavizado para el cambio de color en las filas de la tabla del carrito */
+.cart-table tr {
+  transition: background-color 0.25s ease-in-out;
+}
+
+/* 4. Transición mejorada para que el brillo azul (box-shadow) de los inputs no aparezca de golpe */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* 5. Micro-interacción interactiva para los enlaces del footer */
+.site-footer a {
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.site-footer a:hover {
+  color: #ffffff !important;
+  padding-left: 4px;
+  /* Pequeño desplazamiento dinámico al pasar el cursor */
 }
