@@ -19,10 +19,14 @@
 }
 
 body {
-  font-family: var(--font-family);
-  background-color: var(--bg-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* =========================================
@@ -479,4 +483,10 @@ button:active {
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+main {
+  /* --- AGREGAR ESTO --- */
+  flex-grow: 1; /* Obliga al contenido a expandirse y empujar el footer hacia el fondo */
+
+  /* Mantén el padding que ya tenías, por ejemplo: padding: 2rem; */
 }
